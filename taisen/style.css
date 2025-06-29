@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#matchResults div {
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+table {
+    margin: 20px auto; /* テーブルを中央に配置 */
+    border-collapse: collapse;
+    width: 80%; /* 必要なら幅を調整 */
+}
+
+th, td {
+    border: 1px solid #ddd; /* 枠線 */
+    padding: 8px;
+    text-align: center; /* テキストを中央揃え */
+}
+
+th {
+    background-color: #f2f2f2; /* ヘッダーの背景色 */
+}

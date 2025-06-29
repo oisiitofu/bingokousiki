@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>チーム対戦レート管理</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>チームレート対戦</h1>
+
+  <div class="register">
+    <input id="playerName" placeholder="プレイヤー名" />
+    <button onclick="registerPlayer()">登録</button>
+  </div>
+
+  <div class="team-options">
+    チーム人数:
+    <label><input type="radio" name="teamSize" value="2" checked onchange="renderTeamSelectors()"> 2人</label>
+    <label><input type="radio" name="teamSize" value="3" onchange="renderTeamSelectors()"> 3人</label>
+  </div>
+
+  <div class="match">
+    <div>
+      <p>チームA:</p>
+      <div id="team1Selectors"></div>
+    </div>
+    <div>
+      <p>チームB:</p>
+      <div id="team2Selectors"></div>
+    </div>
+    <button onclick="reportMatch('1')">← 勝ち</button>
+    <button onclick="reportMatch('2')">勝ち →</button>
+  </div>
+
+  <div class="main">
+    <div class="left">
+      <h2>チームレート（個人）</h2>
+<table id="ranking">
+  <thead>
+    <tr>
+      <th>順位</th><th>名前</th><th>レート</th><th>試合</th><th>勝利</th><th>勝率</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+    </div>
+
+    <div class="right">
+      <h2>対戦履歴</h2>
+      <ul id="historyLog"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+<div class="reset-area">
+  <button onclick="undoLastMatch()">直前の試合を取り消す</button>
+  <button onclick="resetAll()">全ての結果をリセット</button>
+  <button onclick="exportCSV()">履歴をCSVでダウンロード</button>
+</div>
+
+</body>
+</html>
