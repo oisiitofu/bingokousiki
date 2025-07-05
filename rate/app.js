@@ -169,3 +169,8 @@ function exportCSV() {
   link.click();
   document.body.removeChild(link);
 }
+
+function changeTitle(newTitle) {
+    const titleElement = document.getElementById("title");
+    titleElement.textContent = newTitle;
+}
